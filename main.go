@@ -3,7 +3,10 @@ package main
 import "fmt"
 
 func main() {
+
 	for {
+		var login string
+		var password string
 		var action int
 		fmt.Println("Что вы хотите сделать?")
 		fmt.Println("1. Зарегистрироваться")
@@ -15,7 +18,7 @@ func main() {
 			fmt.Println("Введите логин:")
 			fmt.Scan(&login)
 			for {
-				var password string
+
 				fmt.Println("Введите пароль:")
 				fmt.Scan(&password)
 				// хуй
@@ -32,13 +35,25 @@ func main() {
 
 		}
 		if action == 2 {
-			var login string
+			var login1 string
+			var password1 string
 			fmt.Println("Введите логин:")
-			fmt.Scan(&login)
-			var password string
-			fmt.Println("Введите пароль:")
-			fmt.Scan(&password)
-			fmt.Println("Вы успешно вошли в программу")
+			fmt.Scan(&login1)
+			if login1 == login {
+				for {
+					fmt.Println("Введите пароль:")
+					fmt.Scan(&password)
+					if password == password1 {
+						fmt.Println("Вы успешно вошли в программу")
+
+					} else {
+						fmt.Println("Пароль неверный, повторите попытку")
+					}
+				}
+			} else {
+				fmt.Println("Вы не зарегистрированы")
+
+			}
 
 		}
 		if action == 3 {
