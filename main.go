@@ -18,7 +18,7 @@ func main() {
 				var password string
 				fmt.Println("Введите пароль:")
 				fmt.Scan(&password)
-
+				// хуй
 				var password1 string
 				fmt.Println("Повторите пароль:")
 				fmt.Scan(&password1)
